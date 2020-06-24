@@ -1,0 +1,479 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F4A4E822-1E6B-4C61-9B8B-B7E5DDC8A59E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>YT_DL</RootNamespace>
+    <AssemblyName>YT-DL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publikuj\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Downloader.cs" />
+    <Compile Include="YTDLOkno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YTDLOkno.Designer.cs">
+      <DependentUpon>YTDLOkno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="YTDLOkno.pl.resx">
+      <DependentUpon>YTDLOkno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YTDLOkno.resx">
+      <DependentUpon>YTDLOkno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="bin\Debug\%27C#\Users\djbob\source\repos\YT-DL\bin\Debug\downloaded\Guns N%27 Roses - November Rain.webm%27" />
+    <None Include="bin\Debug\libav-win32\bin\avcodec.lib" />
+    <None Include="bin\Debug\libav-win32\bin\avdevice.lib" />
+    <None Include="bin\Debug\libav-win32\bin\avfilter.lib" />
+    <None Include="bin\Debug\libav-win32\bin\avformat.lib" />
+    <None Include="bin\Debug\libav-win32\bin\avresample.lib" />
+    <None Include="bin\Debug\libav-win32\bin\avutil.lib" />
+    <None Include="bin\Debug\libav-win32\bin\swscale.lib" />
+    <None Include="bin\Debug\libav-win32\lib\libavcodec.a" />
+    <None Include="bin\Debug\libav-win32\lib\libavcodec.dll.a" />
+    <None Include="bin\Debug\libav-win32\lib\libavdevice.a" />
+    <None Include="bin\Debug\libav-win32\lib\libavdevice.dll.a" />
+    <None Include="bin\Debug\libav-win32\lib\libavfilter.a" />
+    <None Include="bin\Debug\libav-win32\lib\libavfilter.dll.a" />
+    <None Include="bin\Debug\libav-win32\lib\libavformat.a" />
+    <None Include="bin\Debug\libav-win32\lib\libavformat.dll.a" />
+    <None Include="bin\Debug\libav-win32\lib\libavresample.a" />
+    <None Include="bin\Debug\libav-win32\lib\libavresample.dll.a" />
+    <None Include="bin\Debug\libav-win32\lib\libavutil.a" />
+    <None Include="bin\Debug\libav-win32\lib\libavutil.dll.a" />
+    <None Include="bin\Debug\libav-win32\lib\libswscale.a" />
+    <None Include="bin\Debug\libav-win32\lib\libswscale.dll.a" />
+    <None Include="bin\Debug\libav-win32\lib\pkgconfig\libavcodec.pc" />
+    <None Include="bin\Debug\libav-win32\lib\pkgconfig\libavdevice.pc" />
+    <None Include="bin\Debug\libav-win32\lib\pkgconfig\libavfilter.pc" />
+    <None Include="bin\Debug\libav-win32\lib\pkgconfig\libavformat.pc" />
+    <None Include="bin\Debug\libav-win32\lib\pkgconfig\libavresample.pc" />
+    <None Include="bin\Debug\libav-win32\lib\pkgconfig\libavutil.pc" />
+    <None Include="bin\Debug\libav-win32\lib\pkgconfig\libswscale.pc" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libvpx-1080p.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libvpx-1080p50_60.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libvpx-360p.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libvpx-720p.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libvpx-720p50_60.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libx264-baseline.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libx264-fast.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libx264-faster.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libx264-faster_firstpass.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libx264-fast_firstpass.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libx264-ipod320.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libx264-ipod640.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libx264-lossless_fast.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libx264-lossless_max.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libx264-lossless_medium.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libx264-lossless_slow.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libx264-lossless_slower.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libx264-lossless_ultrafast.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libx264-main.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libx264-medium.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libx264-medium_firstpass.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libx264-placebo.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libx264-placebo_firstpass.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libx264-slow.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libx264-slower.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libx264-slower_firstpass.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libx264-slow_firstpass.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libx264-superfast.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libx264-superfast_firstpass.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libx264-ultrafast.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libx264-ultrafast_firstpass.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libx264-veryfast.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libx264-veryfast_firstpass.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libx264-veryslow.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\avconv\libx264-veryslow_firstpass.avpreset" />
+    <None Include="bin\Debug\libav-win32\share\man\man1\avconv.1" />
+    <None Include="bin\Debug\libav-win32\share\man\man1\avplay.1" />
+    <None Include="bin\Debug\libav-win32\share\man\man1\avprobe.1" />
+    <None Include="bin\Debug\libav-win64\bin\avcodec.lib" />
+    <None Include="bin\Debug\libav-win64\bin\avdevice.lib" />
+    <None Include="bin\Debug\libav-win64\bin\avfilter.lib" />
+    <None Include="bin\Debug\libav-win64\bin\avformat.lib" />
+    <None Include="bin\Debug\libav-win64\bin\avresample.lib" />
+    <None Include="bin\Debug\libav-win64\bin\avutil.lib" />
+    <None Include="bin\Debug\libav-win64\bin\swscale.lib" />
+    <None Include="bin\Debug\libav-win64\lib\libavcodec.a" />
+    <None Include="bin\Debug\libav-win64\lib\libavcodec.dll.a" />
+    <None Include="bin\Debug\libav-win64\lib\libavdevice.a" />
+    <None Include="bin\Debug\libav-win64\lib\libavdevice.dll.a" />
+    <None Include="bin\Debug\libav-win64\lib\libavfilter.a" />
+    <None Include="bin\Debug\libav-win64\lib\libavfilter.dll.a" />
+    <None Include="bin\Debug\libav-win64\lib\libavformat.a" />
+    <None Include="bin\Debug\libav-win64\lib\libavformat.dll.a" />
+    <None Include="bin\Debug\libav-win64\lib\libavresample.a" />
+    <None Include="bin\Debug\libav-win64\lib\libavresample.dll.a" />
+    <None Include="bin\Debug\libav-win64\lib\libavutil.a" />
+    <None Include="bin\Debug\libav-win64\lib\libavutil.dll.a" />
+    <None Include="bin\Debug\libav-win64\lib\libswscale.a" />
+    <None Include="bin\Debug\libav-win64\lib\libswscale.dll.a" />
+    <None Include="bin\Debug\libav-win64\lib\pkgconfig\libavcodec.pc" />
+    <None Include="bin\Debug\libav-win64\lib\pkgconfig\libavdevice.pc" />
+    <None Include="bin\Debug\libav-win64\lib\pkgconfig\libavfilter.pc" />
+    <None Include="bin\Debug\libav-win64\lib\pkgconfig\libavformat.pc" />
+    <None Include="bin\Debug\libav-win64\lib\pkgconfig\libavresample.pc" />
+    <None Include="bin\Debug\libav-win64\lib\pkgconfig\libavutil.pc" />
+    <None Include="bin\Debug\libav-win64\lib\pkgconfig\libswscale.pc" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libvpx-1080p.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libvpx-1080p50_60.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libvpx-360p.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libvpx-720p.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libvpx-720p50_60.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libx264-baseline.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libx264-fast.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libx264-faster.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libx264-faster_firstpass.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libx264-fast_firstpass.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libx264-ipod320.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libx264-ipod640.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libx264-lossless_fast.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libx264-lossless_max.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libx264-lossless_medium.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libx264-lossless_slow.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libx264-lossless_slower.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libx264-lossless_ultrafast.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libx264-main.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libx264-medium.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libx264-medium_firstpass.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libx264-placebo.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libx264-placebo_firstpass.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libx264-slow.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libx264-slower.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libx264-slower_firstpass.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libx264-slow_firstpass.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libx264-superfast.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libx264-superfast_firstpass.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libx264-ultrafast.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libx264-ultrafast_firstpass.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libx264-veryfast.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libx264-veryfast_firstpass.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libx264-veryslow.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\avconv\libx264-veryslow_firstpass.avpreset" />
+    <None Include="bin\Debug\libav-win64\share\man\man1\avconv.1" />
+    <None Include="bin\Debug\libav-win64\share\man\man1\avplay.1" />
+    <None Include="bin\Debug\libav-win64\share\man\man1\avprobe.1" />
+    <None Include="bin\Debug\YT-DL.exe.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\lib32\ffmpeg.exe" />
+    <Content Include="bin\Debug\lib32\ffplay.exe" />
+    <Content Include="bin\Debug\lib32\ffprobe.exe" />
+    <Content Include="bin\Debug\lib64\ffmpeg.exe" />
+    <Content Include="bin\Debug\lib64\ffplay.exe" />
+    <Content Include="bin\Debug\lib64\ffprobe.exe" />
+    <Content Include="bin\Debug\libav-win32\bin\avcodec-56.dll" />
+    <Content Include="bin\Debug\libav-win32\bin\avconv.exe" />
+    <Content Include="bin\Debug\libav-win32\bin\avdevice-55.dll" />
+    <Content Include="bin\Debug\libav-win32\bin\avfilter-5.dll" />
+    <Content Include="bin\Debug\libav-win32\bin\avformat-56.dll" />
+    <Content Include="bin\Debug\libav-win32\bin\avplay.exe" />
+    <Content Include="bin\Debug\libav-win32\bin\avprobe.exe" />
+    <Content Include="bin\Debug\libav-win32\bin\avresample-2.dll" />
+    <Content Include="bin\Debug\libav-win32\bin\avutil-54.dll" />
+    <Content Include="bin\Debug\libav-win32\bin\libmp3lame-0.dll" />
+    <Content Include="bin\Debug\libav-win32\bin\libogg-0.dll" />
+    <Content Include="bin\Debug\libav-win32\bin\libopencore-amrnb-0.dll" />
+    <Content Include="bin\Debug\libav-win32\bin\libopencore-amrwb-0.dll" />
+    <Content Include="bin\Debug\libav-win32\bin\libopus-0.dll" />
+    <Content Include="bin\Debug\libav-win32\bin\libvo-aacenc-0.dll" />
+    <Content Include="bin\Debug\libav-win32\bin\libvo-amrwbenc-0.dll" />
+    <Content Include="bin\Debug\libav-win32\bin\libvorbis-0.dll" />
+    <Content Include="bin\Debug\libav-win32\bin\libvorbisenc-2.dll" />
+    <Content Include="bin\Debug\libav-win32\bin\libvorbisfile-3.dll" />
+    <Content Include="bin\Debug\libav-win32\bin\libx264-142.dll" />
+    <Content Include="bin\Debug\libav-win32\bin\swscale-3.dll" />
+    <Content Include="bin\Debug\libav-win32\include\libavcodec\avcodec.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavcodec\avfft.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavcodec\dv_profile.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavcodec\dxva2.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavcodec\vaapi.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavcodec\vda.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavcodec\vdpau.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavcodec\version.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavcodec\xvmc.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavdevice\avdevice.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavdevice\version.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavfilter\avfilter.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavfilter\avfiltergraph.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavfilter\buffersink.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavfilter\buffersrc.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavfilter\version.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavformat\avformat.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavformat\avio.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavformat\version.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavresample\avresample.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavresample\version.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\adler32.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\aes.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\attributes.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\audioconvert.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\audio_fifo.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\avassert.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\avconfig.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\avstring.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\avutil.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\base64.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\blowfish.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\bswap.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\buffer.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\channel_layout.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\common.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\cpu.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\crc.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\dict.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\display.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\downmix_info.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\error.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\eval.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\fifo.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\file.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\frame.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\hmac.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\imgutils.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\intfloat.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\intreadwrite.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\lfg.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\log.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\lzo.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\macros.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\mathematics.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\md5.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\mem.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\old_pix_fmts.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\opt.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\parseutils.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\pixdesc.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\pixfmt.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\random_seed.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\rational.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\replaygain.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\samplefmt.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\sha.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\stereo3d.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\time.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\version.h" />
+    <Content Include="bin\Debug\libav-win32\include\libavutil\xtea.h" />
+    <Content Include="bin\Debug\libav-win32\include\libswscale\swscale.h" />
+    <Content Include="bin\Debug\libav-win32\include\libswscale\version.h" />
+    <Content Include="bin\Debug\libav-win32\lib\avcodec-56.def" />
+    <Content Include="bin\Debug\libav-win32\lib\avdevice-55.def" />
+    <Content Include="bin\Debug\libav-win32\lib\avfilter-5.def" />
+    <Content Include="bin\Debug\libav-win32\lib\avformat-56.def" />
+    <Content Include="bin\Debug\libav-win32\lib\avresample-2.def" />
+    <Content Include="bin\Debug\libav-win32\lib\avutil-54.def" />
+    <Content Include="bin\Debug\libav-win32\lib\swscale-3.def" />
+    <Content Include="bin\Debug\libav-win64\bin\avcodec-56.dll" />
+    <Content Include="bin\Debug\libav-win64\bin\avconv.exe" />
+    <Content Include="bin\Debug\libav-win64\bin\avdevice-55.dll" />
+    <Content Include="bin\Debug\libav-win64\bin\avfilter-5.dll" />
+    <Content Include="bin\Debug\libav-win64\bin\avformat-56.dll" />
+    <Content Include="bin\Debug\libav-win64\bin\avplay.exe" />
+    <Content Include="bin\Debug\libav-win64\bin\avprobe.exe" />
+    <Content Include="bin\Debug\libav-win64\bin\avresample-2.dll" />
+    <Content Include="bin\Debug\libav-win64\bin\avutil-54.dll" />
+    <Content Include="bin\Debug\libav-win64\bin\libexpat-1.dll" />
+    <Content Include="bin\Debug\libav-win64\bin\libfdk-aac-0.dll" />
+    <Content Include="bin\Debug\libav-win64\bin\libgmp-10.dll" />
+    <Content Include="bin\Debug\libav-win64\bin\libgmpxx-4.dll" />
+    <Content Include="bin\Debug\libav-win64\bin\libjpeg-62.dll" />
+    <Content Include="bin\Debug\libav-win64\bin\libmp3lame-0.dll" />
+    <Content Include="bin\Debug\libav-win64\bin\libogg-0.dll" />
+    <Content Include="bin\Debug\libav-win64\bin\libopencore-amrnb-0.dll" />
+    <Content Include="bin\Debug\libav-win64\bin\libopencore-amrwb-0.dll" />
+    <Content Include="bin\Debug\libav-win64\bin\libopus-0.dll" />
+    <Content Include="bin\Debug\libav-win64\bin\libpng16-16.dll" />
+    <Content Include="bin\Debug\libav-win64\bin\libturbojpeg-0.dll" />
+    <Content Include="bin\Debug\libav-win64\bin\libvo-aacenc-0.dll" />
+    <Content Include="bin\Debug\libav-win64\bin\libvo-amrwbenc-0.dll" />
+    <Content Include="bin\Debug\libav-win64\bin\libvorbis-0.dll" />
+    <Content Include="bin\Debug\libav-win64\bin\libvorbisenc-2.dll" />
+    <Content Include="bin\Debug\libav-win64\bin\libvorbisfile-3.dll" />
+    <Content Include="bin\Debug\libav-win64\bin\libwebp-4.dll" />
+    <Content Include="bin\Debug\libav-win64\bin\libwebpdecoder-0.dll" />
+    <Content Include="bin\Debug\libav-win64\bin\libwebpdemux-0.dll" />
+    <Content Include="bin\Debug\libav-win64\bin\libwebpmux-0.dll" />
+    <Content Include="bin\Debug\libav-win64\bin\libx264-142.dll" />
+    <Content Include="bin\Debug\libav-win64\bin\swscale-3.dll" />
+    <Content Include="bin\Debug\libav-win64\bin\zlib1.dll" />
+    <Content Include="bin\Debug\libav-win64\include\libavcodec\avcodec.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavcodec\avfft.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavcodec\dv_profile.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavcodec\dxva2.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavcodec\vaapi.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavcodec\vda.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavcodec\vdpau.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavcodec\version.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavcodec\xvmc.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavdevice\avdevice.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavdevice\version.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavfilter\avfilter.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavfilter\avfiltergraph.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavfilter\buffersink.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavfilter\buffersrc.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavfilter\version.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavformat\avformat.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavformat\avio.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavformat\version.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavresample\avresample.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavresample\version.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\adler32.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\aes.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\attributes.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\audioconvert.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\audio_fifo.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\avassert.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\avconfig.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\avstring.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\avutil.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\base64.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\blowfish.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\bswap.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\buffer.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\channel_layout.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\common.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\cpu.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\crc.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\dict.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\display.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\downmix_info.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\error.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\eval.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\fifo.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\file.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\frame.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\hmac.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\imgutils.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\intfloat.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\intreadwrite.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\lfg.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\log.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\lzo.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\macros.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\mathematics.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\md5.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\mem.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\old_pix_fmts.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\opt.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\parseutils.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\pixdesc.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\pixfmt.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\random_seed.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\rational.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\replaygain.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\samplefmt.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\sha.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\stereo3d.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\time.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\version.h" />
+    <Content Include="bin\Debug\libav-win64\include\libavutil\xtea.h" />
+    <Content Include="bin\Debug\libav-win64\include\libswscale\swscale.h" />
+    <Content Include="bin\Debug\libav-win64\include\libswscale\version.h" />
+    <Content Include="bin\Debug\libav-win64\lib\avcodec-56.def" />
+    <Content Include="bin\Debug\libav-win64\lib\avdevice-55.def" />
+    <Content Include="bin\Debug\libav-win64\lib\avfilter-5.def" />
+    <Content Include="bin\Debug\libav-win64\lib\avformat-56.def" />
+    <Content Include="bin\Debug\libav-win64\lib\avresample-2.def" />
+    <Content Include="bin\Debug\libav-win64\lib\avutil-54.def" />
+    <Content Include="bin\Debug\libav-win64\lib\swscale-3.def" />
+    <Content Include="bin\Debug\pl\YT-DL.resources.dll" />
+    <Content Include="bin\Debug\youtube-dl.exe" />
+    <Content Include="bin\Debug\YT-DL.exe" />
+    <Content Include="bin\Debug\YT-DL.pdb" />
+    <Content Include="icon.ico" />
+    <Content Include="youtube-dl.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\downloaded\" />
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

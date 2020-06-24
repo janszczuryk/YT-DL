@@ -1,0 +1,591 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="buttonDownloadedFolder.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="buttonDownloadedFolder.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="buttonDownloadedFolder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>173, 12</value>
+  </data>
+  <data name="buttonDownloadedFolder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 37</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="buttonDownloadedFolder.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="buttonDownloadedFolder.Text" xml:space="preserve">
+    <value>Pobrane</value>
+  </data>
+  <data name="&gt;&gt;buttonDownloadedFolder.Name" xml:space="preserve">
+    <value>buttonDownloadedFolder</value>
+  </data>
+  <data name="&gt;&gt;buttonDownloadedFolder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonDownloadedFolder.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;buttonDownloadedFolder.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="outputLogs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 66</value>
+  </data>
+  <data name="outputLogs.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="outputLogs.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="outputLogs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>441, 342</value>
+  </data>
+  <data name="outputLogs.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;outputLogs.Name" xml:space="preserve">
+    <value>outputLogs</value>
+  </data>
+  <data name="&gt;&gt;outputLogs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;outputLogs.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;outputLogs.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="buttonCloseWindow.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="buttonCloseWindow.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonCloseWindow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>367, 12</value>
+  </data>
+  <data name="buttonCloseWindow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 37</value>
+  </data>
+  <data name="buttonCloseWindow.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="buttonCloseWindow.Text" xml:space="preserve">
+    <value>Zamknij</value>
+  </data>
+  <data name="&gt;&gt;buttonCloseWindow.Name" xml:space="preserve">
+    <value>buttonCloseWindow</value>
+  </data>
+  <data name="&gt;&gt;buttonCloseWindow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonCloseWindow.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;buttonCloseWindow.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="labelProgramTitle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelProgramTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 14pt, style=Bold</value>
+  </data>
+  <data name="labelProgramTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 20</value>
+  </data>
+  <data name="labelProgramTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 23</value>
+  </data>
+  <data name="labelProgramTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="labelProgramTitle.Text" xml:space="preserve">
+    <value>YT-DL v0.3</value>
+  </data>
+  <data name="&gt;&gt;labelProgramTitle.Name" xml:space="preserve">
+    <value>labelProgramTitle</value>
+  </data>
+  <data name="&gt;&gt;labelProgramTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelProgramTitle.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;labelProgramTitle.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="buttonSettings.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="buttonSettings.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>270, 12</value>
+  </data>
+  <data name="buttonSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 37</value>
+  </data>
+  <data name="buttonSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="buttonSettings.Text" xml:space="preserve">
+    <value>Opcje</value>
+  </data>
+  <data name="&gt;&gt;buttonSettings.Name" xml:space="preserve">
+    <value>buttonSettings</value>
+  </data>
+  <data name="&gt;&gt;buttonSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonSettings.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;buttonSettings.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panel1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 10, 10</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>480, 421</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labelDownloadTitle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelDownloadTitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelDownloadTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 157</value>
+  </data>
+  <data name="labelDownloadTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 21</value>
+  </data>
+  <data name="labelDownloadTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="labelDownloadTitle.Text" xml:space="preserve">
+    <value>Linki utworów (w nowych liniach):</value>
+  </data>
+  <data name="&gt;&gt;labelDownloadTitle.Name" xml:space="preserve">
+    <value>labelDownloadTitle</value>
+  </data>
+  <data name="&gt;&gt;labelDownloadTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelDownloadTitle.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;labelDownloadTitle.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelDownloadLinks.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelDownloadLinks.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 42</value>
+  </data>
+  <data name="labelDownloadLinks.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 21</value>
+  </data>
+  <data name="labelDownloadLinks.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="labelDownloadLinks.Text" xml:space="preserve">
+    <value>Wyszukaj tytuł utworu:</value>
+  </data>
+  <data name="&gt;&gt;labelDownloadLinks.Name" xml:space="preserve">
+    <value>labelDownloadLinks</value>
+  </data>
+  <data name="&gt;&gt;labelDownloadLinks.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelDownloadLinks.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;labelDownloadLinks.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="buttonDownloadLinks.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="buttonDownloadLinks.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 371</value>
+  </data>
+  <data name="buttonDownloadLinks.Size" type="System.Drawing.Size, System.Drawing">
+    <value>454, 37</value>
+  </data>
+  <data name="buttonDownloadLinks.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="buttonDownloadLinks.Text" xml:space="preserve">
+    <value>Pobierz</value>
+  </data>
+  <data name="&gt;&gt;buttonDownloadLinks.Name" xml:space="preserve">
+    <value>buttonDownloadLinks</value>
+  </data>
+  <data name="&gt;&gt;buttonDownloadLinks.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonDownloadLinks.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;buttonDownloadLinks.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="contextMenuInputLinks.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>192, 17</value>
+  </metadata>
+  <data name="stripInputLinksPaste.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 9pt, style=Bold</value>
+  </data>
+  <data name="stripInputLinksPaste.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 22</value>
+  </data>
+  <data name="stripInputLinksPaste.Text" xml:space="preserve">
+    <value>Wklej</value>
+  </data>
+  <data name="contextMenuInputLinks.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 26</value>
+  </data>
+  <data name="&gt;&gt;contextMenuInputLinks.Name" xml:space="preserve">
+    <value>contextMenuInputLinks</value>
+  </data>
+  <data name="&gt;&gt;contextMenuInputLinks.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="inputLinks.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 181</value>
+  </data>
+  <data name="inputLinks.ScrollBars" type="System.Windows.Forms.RichTextBoxScrollBars, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="inputLinks.Size" type="System.Drawing.Size, System.Drawing">
+    <value>454, 184</value>
+  </data>
+  <data name="inputLinks.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="inputLinks.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;inputLinks.Name" xml:space="preserve">
+    <value>inputLinks</value>
+  </data>
+  <data name="&gt;&gt;inputLinks.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;inputLinks.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;inputLinks.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="buttonDownloadTitle.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="buttonDownloadTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 99</value>
+  </data>
+  <data name="buttonDownloadTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>454, 37</value>
+  </data>
+  <data name="buttonDownloadTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="buttonDownloadTitle.Text" xml:space="preserve">
+    <value>Pobierz</value>
+  </data>
+  <data name="&gt;&gt;buttonDownloadTitle.Name" xml:space="preserve">
+    <value>buttonDownloadTitle</value>
+  </data>
+  <data name="&gt;&gt;buttonDownloadTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonDownloadTitle.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;buttonDownloadTitle.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <metadata name="contextMenuInputTitle.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="stripInputTitlePaste.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 9pt, style=Bold</value>
+  </data>
+  <data name="stripInputTitlePaste.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 22</value>
+  </data>
+  <data name="stripInputTitlePaste.Text" xml:space="preserve">
+    <value>Wklej</value>
+  </data>
+  <data name="contextMenuInputTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 26</value>
+  </data>
+  <data name="&gt;&gt;contextMenuInputTitle.Name" xml:space="preserve">
+    <value>contextMenuInputTitle</value>
+  </data>
+  <data name="&gt;&gt;contextMenuInputTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="inputTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 66</value>
+  </data>
+  <data name="inputTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>454, 27</value>
+  </data>
+  <data name="inputTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;inputTitle.Name" xml:space="preserve">
+    <value>inputTitle</value>
+  </data>
+  <data name="&gt;&gt;inputTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;inputTitle.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;inputTitle.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>464, 0</value>
+  </data>
+  <data name="panel2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 10, 10</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>480, 421</value>
+  </data>
+  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>10, 21</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>944, 421</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 12pt</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AACn2+j/ldDi/36+1/+EvdP/dbbN/3O0yv9trMH/aqe9/2imu/9lp7z/fLTG/4+8y/+Et8P/dK3C/2yp
+        w/9VoMH/seHq/6XZ5P+Nxtn/iMHV/326z/9ys8n/b7DG/2+vxf9tq8D/aaa6/2+qvv97scT/i7nH/4i5
+        yv9vrMP/VJ+9/7zm6v+p1+L/mM3e/3mruv9UeYn/U36M/0Zygf9Ke5L/Ypiu/3ewx/9xqsH/erDC/4a1
+        xf+Jt8j/fLXG/2qrw/+fy9X/qdbj/5TA0P87VFn/HSYp/yIyNf9CY2v/QGd1/z5ldP9pn7H/da/D/3yx
+        w/+Ds8X/g7XG/4y+zv+Hu8v/kLzK/6vZ5f91m6b/Kzo9/ykzMv9UaG3/faex/3Otwf9op7z/fq68/4S1
+        xP9+ssL/g7TF/32yxf98s8f/gbXJ/5PBzv+u2uD/gp2e/ys4Of8dJiT/Ul9f/5Crr/+Gs8H/fbXJ/5vC
+        y/+bwcn/nsbS/5nDzv+Rvs3/gbTG/3iww/+Pu8n/suDp/5ausP8RGBT/BgcE/x0hIf+btrv/lsjW/325
+        z/+Sws7/msjS/5jCzf+Yw87/nMnT/5vH0v+RwM7/krzE/6/c5f+v0tT/Wmtq/0RVWP9ceYD/j8PT/3/A
+        1/9rstL/eLjS/26yzf9xts//ksLR/6HN2P+Rwc3/ksLR/6LKzv+w2d//v+nr/5jT6P+Kyub/hMfl/3+/
+        3P9yuNn/S5a7/01ygP9FXWb/W4SU/3+70f+KwNL/fLjM/3q2zP+mzNH/otHZ/8To7v+NxNj/V4WZ/16d
+        wP92vOD/dLva/0KKq/8+WGX/NTcz/xcsMf9QnL7/YqrI/1ypyP9YqMj/o8fN/5rI1P+o2+j/rtrl/z1N
+        UP8uTFf/arPY/1ylxf9rrsr/ea7B/1eFlv9QlbP/R5vC/1Whwv9krcv/ZLPZ/2Cgtv9tqsP/fcPg/4TI
+        5P9gl7H/Z5ip/3m4zv9Bk7r/TZu9/4G80P98utL/Up3A/0qZvv9Ypsn/WanN/z2FtP9Ik67/TJey/2Su
+        y/98xeX/e8Tq/37C5f+LyN7/VKTG/zqOvP9aosH/YaK5/1abuP9SocT/T6TM/zmErf8ZP1r/O4ej/0GK
+        pf9Fjaj/T5i1/2Cnyf9xudz/gMDb/1+qy/86kMT/OpbF/06gx/9TpMr/Q57K/ytzrf8vapz/OG+S/125
+        0P9Nq8X/TaC6/0mZsv9Ela//UKTG/06j0P9Wq9P/RJ7P/0Sdzv9ZqdX/W6rU/1anz/9RmcT/M3ij/zVx
+        nf+F2/D/edjs/3fQ5/93zeb/asvj/2rC3/87lcT/LIG7/2Os0v+e0eH/qNff/6zW4P+02+T/s+Dm/3Cv
+        x/9Diar/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAA==
+</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>YT-DL</value>
+  </data>
+  <data name="&gt;&gt;stripInputLinksPaste.Name" xml:space="preserve">
+    <value>stripInputLinksPaste</value>
+  </data>
+  <data name="&gt;&gt;stripInputLinksPaste.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;stripInputTitlePaste.Name" xml:space="preserve">
+    <value>stripInputTitlePaste</value>
+  </data>
+  <data name="&gt;&gt;stripInputTitlePaste.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>YTDLOkno</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>
