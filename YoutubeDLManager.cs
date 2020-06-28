@@ -3,18 +3,17 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 
 namespace YT_DL
 {
-    class Downloader
+    class YoutubeDLManager
     {
-        private readonly string YoutubeDLPath = "youtube-dl.exe";
-        private static string LibPath = @"lib64\";
-        private static string DownloadingPath = @"downloaded\";
-        private List<string> Parameters = new List<string>();
-        private Process YoutubeDLProcess;
+        protected readonly string YoutubeDLPath = "youtube-dl.exe";
+        protected List<string> Parameters = new List<string>();
+        protected Process YoutubeDLProcess;
        
-        public Downloader()
+        public YoutubeDLManager()
         {
             YoutubeDLProcess = new Process
             {
@@ -27,54 +26,37 @@ namespace YT_DL
                 }
             };
         }
-        public static string GetDownloadingPath()
-        {
-            return DownloadingPath;
-        }
 
-        public string StartDownloadLinks(List<string> links)
-        {
-            SetDownloadParameters();
-            SetDownloadLinks(links);
-
-            return RunYoutubeDL();
-        }
-
-        public string StartDownloadTitle(string title)
-        {
-            SetDownloadParameters();
-            AddParameter("--default-search " + EscapeArguments("ytsearch"));
-            AddParameter(EscapeArguments($"\"{ title }\""));
-
-            return RunYoutubeDL();
-        }
-
-        public string UpdateYoutubeDL()
+        public async void UpdateYoutubeDL()
         {
             Parameters.Clear();
             AddParameter("-U");
 
-            return RunYoutubeDL();
+            await RunYoutubeDL();
         }
 
-        private string RunYoutubeDL()
+        protected async Task<string> RunYoutubeDL()
         {
             string args = String.Join(" ", Parameters);
 
-            Console.WriteLine("Arg: " + args);
+            //Console.WriteLine("Arg: " + args);
 
             YoutubeDLProcess.StartInfo.Arguments = args;
             YoutubeDLProcess.Start();
-            var outputTask = YoutubeDLProcess.StandardOutput.ReadToEndAsync();
+            var outputTask = await YoutubeDLProcess.StandardOutput.ReadToEndAsync();
             YoutubeDLProcess.WaitForExit();
             YoutubeDLProcess.Close();
 
             Parameters.Clear();
 
-            return outputTask.Result;
+            return outputTask;
+        }
+        protected void AddParameter(string parameter)
+        {
+            Parameters.Add(parameter);
         }
 
-        private static string EscapeArguments(params string[] args)
+        protected static string EscapeArguments(params string[] args)
         {
             StringBuilder arguments = new StringBuilder();
             Regex invalidChar = new Regex("[\x00\x0a\x0d]");//  these can not be escaped
@@ -101,27 +83,5 @@ namespace YT_DL
             return arguments.ToString();
         }
 
-        private void SetDownloadParameters()
-        {
-            AddParameter("--ignore-config");
-            AddParameter("-x");
-            AddParameter("--audio-format mp3");
-            AddParameter("--audio-quality 0");
-            AddParameter($"--ffmpeg-location " + EscapeArguments(LibPath));
-            AddParameter($"-o " + EscapeArguments(DownloadingPath + "%(title)s.%(ext)s"));
-        }
-
-        private void SetDownloadLinks(List<string> links)
-        {
-            foreach (string link in links)
-            {
-                AddParameter(EscapeArguments(link));
-            }
-        }
-
-        private void AddParameter(string parameter)
-        {
-            Parameters.Add(parameter);
-        }
     }
 }

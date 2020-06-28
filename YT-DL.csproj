@@ -63,7 +63,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Downloader.cs" />
+    <Compile Include="YoutubeDLDownload.cs" />
+    <Compile Include="YoutubeDLManager.cs" />
     <Compile Include="YTDLOkno.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -42,7 +42,7 @@ namespace YT_DL
             this.labelDownloadTitle = new System.Windows.Forms.Label();
             this.labelDownloadLinks = new System.Windows.Forms.Label();
             this.buttonDownloadLinks = new System.Windows.Forms.Button();
-            this.inputLinks = new System.Windows.Forms.RichTextBox();
+            this.inputLinks = new System.Windows.Forms.TextBox();
             this.contextMenuInputLinks = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.stripInputLinksPaste = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonDownloadTitle = new System.Windows.Forms.Button();
@@ -142,8 +142,6 @@ namespace YT_DL
             this.inputLinks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(54)))), ((int)(((byte)(61)))));
             this.inputLinks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.inputLinks.ContextMenuStrip = this.contextMenuInputLinks;
-            this.inputLinks.DetectUrls = false;
-            this.inputLinks.EnableAutoDragDrop = true;
             this.inputLinks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.inputLinks.HideSelection = false;
             resources.ApplyResources(this.inputLinks, "inputLinks");
@@ -183,6 +181,7 @@ namespace YT_DL
             this.inputTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             resources.ApplyResources(this.inputTitle, "inputTitle");
             this.inputTitle.Name = "inputTitle";
+            this.inputTitle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inputTitle_KeyPress);
             // 
             // contextMenuInputTitle
             // 
@@ -227,7 +226,7 @@ namespace YT_DL
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox inputTitle;
-        private System.Windows.Forms.RichTextBox inputLinks;
+        private System.Windows.Forms.TextBox inputLinks;
         private System.Windows.Forms.TextBox outputLogs;
         private System.Windows.Forms.Button buttonDownloadTitle;
         private System.Windows.Forms.Button buttonDownloadLinks;

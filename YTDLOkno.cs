@@ -7,6 +7,9 @@ namespace YT_DL
 {
     public partial class YTDLOkno : Form
     {
+        private static readonly string NL = Environment.NewLine;
+        private static bool Updated = false;
+
         public YTDLOkno()
         {
             InitializeComponent();
@@ -14,9 +17,9 @@ namespace YT_DL
 
         private void YTDLOkno_Load(object sender, EventArgs e)
         {
-            Downloader downloader = new Downloader();
-            downloader.UpdateYoutubeDL();
-
+            YoutubeDLManager manager = new YoutubeDLManager();
+            manager.UpdateYoutubeDL();
+            Updated = true;
         }
 
         private void ButtonCloseWindow_Click(object sender, EventArgs e)
@@ -29,34 +32,43 @@ namespace YT_DL
 
         }
 
-        private void ButtonDownloadTitle_Click(object sender, EventArgs e)
-        {
-            string title = inputTitle.Text;
-            outputLogs.AppendText(@"Rozpoczęcie pobierania: " + title + "...");
-            Downloader Downloader = new Downloader();
-            string Output = Downloader.StartDownloadTitle(title);
-            outputLogs.AppendText(Output);
-            outputLogs.AppendText(Environment.NewLine + Environment.NewLine);
-        }
-
         private void ButtonDownloadedFolder_Click(object sender, EventArgs e)
         {
-            string path = Directory.GetCurrentDirectory() + @"\" + Downloader.GetDownloadingPath();
+            string path = Directory.GetCurrentDirectory() + @"\" + YoutubeDLDownload.GetPathDownloading();
             System.Diagnostics.Process.Start("explorer.exe", path);
         }
 
-        private void ButtonDownloadLinks_Click(object sender, EventArgs e)
+        private async void ButtonDownloadTitle_Click(object sender, EventArgs e)
         {
-            List<string> Links = new List<string>(inputLinks.Lines);
-            outputLogs.AppendText(@"Rozpoczęcie pobierania zestawu linków...");
-            Downloader Downloader = new Downloader();
-            string Output = Downloader.StartDownloadLinks(Links);
-            outputLogs.AppendText(Output);
-            outputLogs.AppendText(Environment.NewLine + Environment.NewLine);
+            if (!CanRun())
+                return;
+
+            string title = inputTitle.Text;
+            outputLogs.AppendText(@"Rozpoczęcie pobierania: " + title + "..." + NL + NL);
+
+            YoutubeDLDownload downloader = new YoutubeDLDownload();
+            var output = await downloader.StartDownloadTitle(title);
+
+            outputLogs.AppendText(output + NL + NL);
         }
+
+        private async void ButtonDownloadLinks_Click(object sender, EventArgs e)
+        {
+            if (!CanRun())
+                return;
+
+            List<string> links = new List<string>(inputLinks.Lines);
+            outputLogs.AppendText(@"Rozpoczęcie pobierania zestawu linków..." + NL + NL);
+
+            YoutubeDLDownload downloader = new YoutubeDLDownload();
+            var output = await downloader.StartDownloadLinks(links);
+
+            outputLogs.AppendText(output + NL + NL);
+        }
+
         private void stripInputTitlePaste_Click(object sender, EventArgs e)
         {
-            if (Clipboard.GetDataObject().GetDataPresent(DataFormats.Text) == true)
+            if (Clipboard.GetDataObject().GetDataPresent(DataFormats.Text))
             {
                 inputTitle.Paste();
             }
@@ -64,11 +76,33 @@ namespace YT_DL
 
         private void stripInputLinksPaste_Click(object sender, EventArgs e)
         {
-            if (Clipboard.GetDataObject().GetDataPresent(DataFormats.Text) == true)
+            if (Clipboard.GetDataObject().GetDataPresent(DataFormats.Text))
             {
                 inputLinks.Paste();
             }
         }
 
+        private async void inputTitle_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(inputTitle.Text))
+            {
+                if (e.KeyChar == (char)Keys.Enter && CanRun())
+                {
+
+                    string title = inputTitle.Text;
+                    outputLogs.AppendText(@"Rozpoczęcie pobierania: " + title + "..." + NL + NL);
+
+                    YoutubeDLDownload downloader = new YoutubeDLDownload();
+                    var output = await downloader.StartDownloadTitle(title);
+
+                    outputLogs.AppendText(output + NL + NL);
+                }
+            }
+        }
+
+        private bool CanRun()
+        {
+            return (Updated == true);
+        }
     }
 }
